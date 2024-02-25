@@ -68,6 +68,7 @@ if prompt := st.chat_input("Text to translate"):
             on_change=update_last_content,
             height=count_lines(response) * 20 + 20,
             key="new_content",
+            temperature=0,
         )
     st.session_state.messages.append({"role": "assistant", "content": response})
 
